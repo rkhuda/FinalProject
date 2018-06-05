@@ -4,7 +4,7 @@ public void setup() {
   size(600, 300);
   mover = new Mover();
   obstacle = mover.getObject();
-  rectMode(CENTER);
+  //rectMode(CENTER);
 }
 
 public void draw() {
