@@ -5,7 +5,7 @@ public class Mover {
   color c;
   Obstacle o; //This is the platform 
 
-  //constructs hopping circle 
+  //constructs hopping square 
   public Mover() {
     x = 100;
     r = 10;
@@ -16,7 +16,7 @@ public class Mover {
     o = new Obstacle();
   }
 
-  //makes square circle
+  //makes square square
   public void move() {
     //change the position etc.
     y += yspeed; 
@@ -38,7 +38,7 @@ public class Mover {
   public void jumpHigher(){
     //y += yspeed; 
     //yspeed += yacc;
-    y--; //research why is it fucking inverted? 
+    y--; 
   }
   
   public void back(){
@@ -72,7 +72,11 @@ public class Mover {
   
   //checks for obstacles
   public void checkObject(){
-    
+    if (o.getX() + o.getWid() > x && o.getX() < x + (r*2) && y < o.getY() + o.getLen() &&
+    y + (r*2) > o.getY() ){
+      yspeed *= -1;
+    }
+    /*
     if ( (y < o.getY() - r) && (x > o.getX()) && (x < o.getX() + o.getWid()) ) {
       yspeed *= -1;
       y = o.getY() - r;//prevents 2 true in a row
@@ -81,7 +85,7 @@ public class Mover {
       yspeed *= -.9;
       y = o.getY() + r;//prevents 2 true in a row
     }
-    
+    */
   }
   
   public Obstacle getObject(){
@@ -89,6 +93,6 @@ public class Mover {
   }
   public void display() {
     fill(c);
-    ellipse(x, y, r * 2, r * 2);
+    rect(x, y, r * 2, r * 2);
   }
 }
