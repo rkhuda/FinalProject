@@ -1,10 +1,10 @@
 public class Obstacle {
   float x, y, len, wid;
   
-  public Obstacle(){
-    x = width/2; //xcor of platform
-    y = height/2; //ycor of platform
-    wid = 60; //width of platform
+  public Obstacle(float xcor, float ycor){
+    x = xcor; //xcor of platform
+    y = ycor; //ycor of platform
+    wid = 80; //width of platform
     len = 10; //length of platform
   }
   public void display(){
