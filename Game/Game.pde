@@ -1,17 +1,19 @@
 Mover mover;
-Obstacle obstacle;
+Obstacle[] obstacles;
 public void setup() {
-  size(600, 300);
+  size(1000, 700);
   mover = new Mover();
-  obstacle = mover.getObject();
+  obstacles = mover.getObject();
   //rectMode(CENTER);
 }
 
 public void draw() {
-  background(255);
-  fill(0);
-  obstacle.display();
+  background(0);
+  fill(255);
+  for (Obstacle obstacle : obstacles){
+    obstacle.display();
+  }
   mover.display();
   mover.move();
-  mover.checkObject();
+  //mover.checkObject();
 }
