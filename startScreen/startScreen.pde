@@ -39,11 +39,12 @@ public class Button {
   }
   
   void Draw() {
-    fill(218);
+    fill(100);
     stroke(141);
     rect(x, y, w, h, 10);
     textAlign(CENTER, CENTER);
-    fill(0);
+    fill(255);
+    //textSize(30);
     text(label, x + (w / 2), y + (h / 2));
   }
   
@@ -76,10 +77,10 @@ void setup() {
   smooth();
   
   // create the button object
-  on_button = new Button("Click Me", 300, 100, 500, 500);
+  on_button = new Button("Click Me", width/2 - 175, height/2, 300, 100);
   
   textAlign(CENTER);
-  textSize(75);
+  //textSize(75);
   word1 = new Intro("House", width/4);
   word2 = new Intro("of", width/2 - 13);
   word3 = new Intro("Illusions", 3*width/4 - 20);
@@ -97,10 +98,11 @@ void draw() {
     // hide the square if the mouse cursor is not over the button
     //background(0);
   //}
-  // draw the button in the window
-  on_button.Draw();
-  
+  textSize(75);
   word1.move();
   word2.move();
   word3.move();
+  textSize(30);
+  // draw the button in the window
+  on_button.Draw();
 }
