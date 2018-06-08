@@ -3,6 +3,7 @@ public class Character {
   float y, yspeed, yacc;
   float r;
   int CT;
+  float max;
   Platform[] platforms; //This is the platform 
 
   //constructs hopping square 
@@ -115,5 +116,22 @@ public class Character {
   public void display() {
     //fill();
     rect(x, y, r, r);
+  }
+  
+  public float getX(){
+    return x;
+  }
+  
+  public float getY(){
+    return y;
+  }
+  
+  public float getMax(){
+    for (Platform object : platforms){
+      if (max > object.getY()){
+        max = object.getY();
+      }
+    }
+    return max;
   }
 }
