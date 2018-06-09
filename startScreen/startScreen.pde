@@ -56,21 +56,28 @@ public class Button {
   }
 }
 
+boolean game = false;
 // mouse button clicked
 void mousePressed()
 {
   if (on_button.MouseIsOver()) {
     // print some text to the console pane if the button is clicked
-    print("Clicked: ");
-    println(clk++);
+    //print("Clicked: ");
+    //println(clk++);
+    game = true;
   }
 }
 
 Intro word1, word2, word3;
 
 Button on_button;  // the button
-int clk = 1;       // number of times the button is clicked
+//int clk = 1;// number of times the button is clicked
 
+Character player;
+
+public Character getPlayer(){
+  return player;
+}
 
 void setup() {
   size(1200, 700);
@@ -85,15 +92,16 @@ void setup() {
   word2 = new Intro("of", width/2 - 13);
   word3 = new Intro("Illusions", 3*width/4 - 20);
   fill(255);
+  player = new Character();
 }
 
 void draw() {
   background(0);
   
   // draw a square if the mouse curser is over the button
-  if (on_button.MouseIsOver()) {
-    rect(200, 20, 50, 50);
-  }
+  //if (on_button.MouseIsOver()) {
+    //rect(200, 20, 50, 50);
+  //}
   //else {
     // hide the square if the mouse cursor is not over the button
     //background(0);
@@ -105,4 +113,7 @@ void draw() {
   textSize(30);
   // draw the button in the window
   on_button.Draw();
+  if (game){
+    startGame();
+  }
 }
