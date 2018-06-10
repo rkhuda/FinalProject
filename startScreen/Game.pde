@@ -12,5 +12,5 @@ public void startGame() {
   }
   person.display();
   person.move();
-  text(frameCount/10, 20, 20);
+  text(millis() / 1000 - getTime(), 20, 20);
 }
