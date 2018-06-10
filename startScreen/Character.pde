@@ -17,8 +17,8 @@ public class Character {
     platforms = new Platform[CT]; //array of platforms 
     for (int x = 0; x < platforms.length; x++){
       //random placement of platforms
-      float xcor = random(width - 100); 
-      float ycor = random(height - r) + 50;
+      float xcor = random(width - 150); 
+      float ycor = random(height - 100) + 50;
       platforms[x] = new Platform(xcor + 50, ycor + 50);
     }
   }
