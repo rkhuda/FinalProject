@@ -23,6 +23,7 @@ public class Intro {
   }
 }
 
+int timePassed;
 boolean game = false;
 // mouse button clicked
 void mousePressed()
@@ -31,8 +32,16 @@ void mousePressed()
     // print some text to the console pane if the button is clicked
     //print("Clicked: ");
     //println(clk++);
+    timePassed = millis() / 1000;
     game = true;
   }
+}
+
+public int getTime(){
+  return timePassed;
+}
+public void setTime(int time){
+  timePassed = time;
 }
 
 Intro word1, word2, word3;
@@ -102,7 +111,7 @@ public void win(){
 
 boolean lose = false;
 public void lose(){
-  if (frameCount/10 == 200){
+  if (millis() / 1000 - getTime() == 5){
     lose = true;
   }
 }
