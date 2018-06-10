@@ -55,6 +55,7 @@ public Character getPlayer(){
   return player;
 }
 
+PImage heart;
 void setup() {
   size(1200, 700);
   smooth();
@@ -69,6 +70,7 @@ void setup() {
   word3 = new Intro("Illusions", 3*width/4 - 20);
   fill(255);
   player = new Character();
+  heart = loadImage("heart.png");
 }
 
 void draw() {
@@ -111,7 +113,7 @@ public void win(){
 
 boolean lose = false;
 public void lose(){
-  if (millis() / 1000 - getTime() == 5){
+  if (millis() / 1000 - getTime() == 30){
     lose = true;
   }
 }
