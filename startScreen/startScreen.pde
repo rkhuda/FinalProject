@@ -23,39 +23,6 @@ public class Intro {
   }
 }
 
-public class Button {
-  String label;
-  float x;    // top left corner x position
-  float y;    // top left corner y position
-  float w;    // width of button
-  float h;    // height of button
-  
-  Button(String labelB, float xpos, float ypos, float widthB, float heightB) {
-    label = labelB;
-    x = xpos;
-    y = ypos;
-    w = widthB;
-    h = heightB;
-  }
-  
-  void Draw() {
-    fill(100);
-    stroke(141);
-    rect(x, y, w, h, 10);
-    textAlign(CENTER, CENTER);
-    fill(255);
-    //textSize(30);
-    text(label, x + (w / 2), y + (h / 2));
-  }
-  
-  boolean MouseIsOver() {
-    if (mouseX > x && mouseX < (x + w) && mouseY > y && mouseY < (y + h)) {
-      return true;
-    }
-    return false;
-  }
-}
-
 boolean game = false;
 // mouse button clicked
 void mousePressed()
@@ -115,5 +82,27 @@ void draw() {
   on_button.Draw();
   if (game){
     startGame();
+  }
+  win();
+  lose();
+  if (win) {
+    showWin();
+  }
+  if (lose){
+    showLose();
+  }
+}
+
+boolean win = false;
+public void win(){
+  if (player.getY() <= height/8){
+    win = true;
+  }
+}
+
+boolean lose = false;
+public void lose(){
+  if (frameCount/10 == 200){
+    lose = true;
   }
 }
