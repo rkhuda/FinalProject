@@ -30,7 +30,7 @@
       text( (millis() / 1000 - getTime())*(-1) + 3, width/2 + 170, height/2 + 30);
     }
     //textSize(75);
-    if ( (millis() / 1000 - getTime())*(-1) + 3 == 0){
+    if ( (millis() / 1000 - getTime())*(-1) + 3 == 0 && numLives > 1){
       numLives--;
       setTime(millis() / 1000);
       checkTime = true;
