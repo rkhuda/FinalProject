@@ -1,10 +1,10 @@
 Basic Description:
-This game combines multiple mini-games, and by winning each game, the character wins the overall game. The player has three lives, and each time the player loses the game, the player has one life yet. There is a time limit of 30 seconds per game. 
+This game is like doodle jump. We put an illusion spin on it. Throughout the gameplay, there are lines that travel in the background changing color. This gives the illusion and unrealistic feeling that we wanted to accomplish for the game. As for the game itself, it is a platform jumping game. To play, you click on the ball and when you release the mouse, the ball jumps upwards. You can break blocks if you hit it from the bottom. You use the mouse to slide the ball left or right as the ball travels upwards. The game ends when it hits the bottom of the screen. 
 
 List of Features:
-1. The title is animated!
-2. Clicking the button on the title screen starts the game. 
-3. The first mini-game is something similar to Doodle Jump, and the objective is to get the character to the top of the screen as marked by the line. The placement of platforms is randomized and different everytime the program is run. The time passed is displayed in the upper left hand corner and and the number of lives is displayed in the upper left hand corner. There is a line to mark the point the character needs to reach. The "illusion" effect comes into play with the platforms themselves, some of which are "transparent" and the player can go through them, but they do not look physically any different than the normal platforms.
-4. Character movement is controlled by the arrow keys. The right arrow key makes the player go right, the left arrow key makes the player go left, the up arrow key makes the player jump higher, and the down arrow key helps makes the jumps less large. 
-5. The "lose" screen displays how many lives the player has left remaining. 
-6. The "win" screen is simply a screen that says you won.
+1. The background is animated! 
+2. Platforms are formed randomly.
+3. There's a block breaker aspect to the game. When the ball hits the platform from the bottom, the platform breaks.
+4. Character movement is controlled by the mouse. Click and release the mouse to make the ball jump. Slide the mouse left or right to make the ball slide as it travels up. 
+5. The game tracks the maximum height you reached.
+6. The game exits automatically when you hit the bottom of the screen as the game is in play.
