@@ -331,6 +331,7 @@ void draw()
   //Checking for game over
   if (doodleYPos < max(distance-(0.5*height),0))
   {
+    //showEndScreen();
     exit();
   }
 }
