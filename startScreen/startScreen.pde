@@ -61,7 +61,7 @@ void setup() {
   smooth();
   
   // create the button object
-  on_button = new Button("Click Me", width/2 - 175, height/2, 300, 100);
+  on_button = new Button("Click to Start", width/2 - 175, height/2, 300, 100);
   
   textAlign(CENTER);
   //textSize(75);
