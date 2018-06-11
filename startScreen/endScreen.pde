@@ -2,6 +2,7 @@
     clear();
     textAlign(CENTER);
     text("You won!!!", width/2, height/2);
+    text("Game Over", width/2, height/2 + 30);
     textSize(75);
   }
   
